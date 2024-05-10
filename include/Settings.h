@@ -5,14 +5,13 @@ class Settings : public Singleton<Settings>
 public:
     void LoadSettings() noexcept;
 
-    void LoadForms() noexcept;
-
-    std::string            FileName;
-    inline static uint32_t high_key;
-    RE::FormID             HighStanceSpellFormID;
-    RE::SpellItem*         HighStanceSpell;
-
-    static RE::FormID ParseFormID(const std::string& str);
-
+    inline static bool lock_third_person{};
+    inline static bool in_combat{};
+    inline static bool first_person_mode{};
     inline static bool debug_logging{};
 };
+
+
+
+
+
