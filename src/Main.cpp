@@ -1,9 +1,9 @@
 #include "Logging.h"
+#include "Manager.h"
 #include "SKSE/Interfaces.h"
 #include "Settings.h"
-#include "Manager.h"
-#include <Hooks.h>
 #include "Utility.h"
+#include <Hooks.h>
 
 void Listener(SKSE::MessagingInterface::Message* message) noexcept
 {

@@ -8,16 +8,14 @@ void Settings::LoadSettings() noexcept
     ini.SetUnicode();
     ini.LoadFile(R"(.\Data\SKSE\Plugins\SwitchCombatView.ini)");
 
-
     lock_third_person = ini.GetBoolValue("Settings", "bLockThirdPerson");
-    in_combat = ini.GetBoolValue("Settings", "bInCombat");
+    in_combat         = ini.GetBoolValue("Settings", "bInCombat");
     first_person_mode = ini.GetBoolValue("Settings", "bFirstPersonLock");
-    debug_logging = ini.GetBoolValue("Log", "Debug");
+    debug_logging     = ini.GetBoolValue("Log", "Debug");
 
     if (first_person_mode) {
         lock_third_person = false;
     }
-
 
     if (debug_logging) {
         spdlog::get("Global")->set_level(spdlog::level::level_enum::debug);
@@ -26,4 +24,3 @@ void Settings::LoadSettings() noexcept
     // Load settings
     logger::info("Loaded settings");
 };
-

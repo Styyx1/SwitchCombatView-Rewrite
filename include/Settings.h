@@ -10,8 +10,3 @@ public:
     inline static bool first_person_mode{};
     inline static bool debug_logging{};
 };
-
-
-
-
-

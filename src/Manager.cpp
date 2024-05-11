@@ -4,9 +4,9 @@
 
 void CameraSwitch::ViewChanger::Change()
 {
-    const auto  player = RE::PlayerCharacter::GetSingleton();
-    const auto  p_cam  = RE::PlayerCamera::GetSingleton();
-    auto        util = Utility::Utility::GetSingleton();
+    const auto  player   = RE::PlayerCharacter::GetSingleton();
+    const auto  p_cam    = RE::PlayerCamera::GetSingleton();
+    auto        util     = Utility::Utility::GetSingleton();
     auto        settings = Settings::GetSingleton();
     static bool view_saved{ false };
     if (!settings->first_person_mode) {
@@ -59,7 +59,6 @@ void CameraSwitch::ViewChanger::Change()
                 logger::debug("returned to init view");
             }
         }
-        
     }
     else if(settings->first_person_mode)
         {
@@ -104,9 +103,7 @@ void CameraSwitch::ViewChanger::Change()
                 logger::debug("returned to init view");
             }
         }
-
     }
-    
 };
 
 void CameraSwitch::ViewChanger::ActorUpdateF(RE::Actor* a_actor, float a_zPos, RE::TESObjectCELL* a_cell)
