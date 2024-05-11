@@ -6,7 +6,7 @@ void Settings::LoadSettings() noexcept
 
     CSimpleIniA ini;
     ini.SetUnicode();
-    ini.LoadFile(R"(.\Data\SKSE\Plugins\SwitchCombatViewSKSE.ini)");
+    ini.LoadFile(R"(.\Data\SKSE\Plugins\SwitchCombatView.ini)");
 
 
     lock_third_person = ini.GetBoolValue("Settings", "bLockThirdPerson");
