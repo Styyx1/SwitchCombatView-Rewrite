@@ -3,7 +3,7 @@ message("Using toolchain file ${CMAKE_TOOLCHAIN_FILE}.")
 
 project(
   SwitchCombatView
-  VERSION 1.1.0
+  VERSION 1.3.0
   LANGUAGES CXX
 )
 set(CMAKE_CXX_STANDARD 23)
