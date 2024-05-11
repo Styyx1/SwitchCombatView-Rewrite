@@ -5,7 +5,7 @@
 void CameraSwitch::ViewChanger::Change()
 {
     const auto  player   = Utility::Utility::GetPlayer();
-    auto  p_cam    = Utility::Utility::GetPlayerCamera();
+    auto        p_cam    = Utility::Utility::GetPlayerCamera();
     auto        util     = Utility::Utility::GetSingleton();
     auto        settings = Settings::GetSingleton();
     static bool view_saved{ false };
@@ -16,14 +16,14 @@ void CameraSwitch::ViewChanger::Change()
                 // changes your view to third
                 if (!view_saved) {
                     view_saved = true;
-                    p_cam->ForceThirdPerson();                    
+                    p_cam->ForceThirdPerson();
                     logger::debug("changed View");
                 }
             }
             else if (p_cam->IsInThirdPerson() && !player->IsInCombat() && !player->AsActorState()->IsBleedingOut() && !util->PlayerIsBeastFormRace()) {
                 if (view_saved) {
                     p_cam->ForceFirstPerson();
-                    view_saved = false;                    
+                    view_saved = false;
                     logger::debug("returned to init view");
                 }
                 // checks if you are in 3rd person and if the view bool was previously changed to true.
@@ -52,7 +52,6 @@ void CameraSwitch::ViewChanger::Change()
                     view_saved = false;
                     logger::debug("returned to init view");
                 }
-                
             }
         }
     }
@@ -76,7 +75,6 @@ void CameraSwitch::ViewChanger::Change()
                     view_saved = false;
                     logger::debug("returned to init view");
                 }
-               
             }
         }
         else if (!settings->in_combat) {
@@ -99,7 +97,7 @@ void CameraSwitch::ViewChanger::Change()
                     p_cam->ForceThirdPerson();
                     view_saved = false;
                     logger::debug("returned to init view");
-                }                
+                }
             }
         }
     }
