@@ -32,7 +32,7 @@ void CameraSwitch::ViewChanger::Change()
                     logger::debug("returned to init view");
                 }
                 // checks if you are in 3rd person and if the view bool was previously changed to true.
-                // if so, it sets you back to 1st person like you were before entering combat 
+                // if so, it sets you back to 1st person like you were before entering combat
             }
         }
         else if (!settings->in_combat) {
@@ -60,8 +60,7 @@ void CameraSwitch::ViewChanger::Change()
             }
         }
     }
-    else if(settings->first_person_mode)
-        {
+    else if (settings->first_person_mode) {
         if (settings->in_combat) {
             if (p_cam->IsInThirdPerson() && player->IsInCombat() && !player->AsActorState()->IsBleedingOut() && !util->PlayerIsBeastFormRace()) {
                 if (!view_saved) {
@@ -71,7 +70,7 @@ void CameraSwitch::ViewChanger::Change()
                 }
                 else if (view_saved && p_cam->IsInThirdPerson()) {
                     p_cam->ForceFirstPerson();
-                }  
+                }
             }
             if (p_cam->IsInFirstPerson() && !player->IsInCombat() && !player->AsActorState()->IsBleedingOut() && !util->PlayerIsBeastFormRace() && view_saved) {
                 // checks if you are in 3rd person and if the view bool was previously changed to true.
@@ -93,7 +92,7 @@ void CameraSwitch::ViewChanger::Change()
                 }
                 else if (view_saved && p_cam->IsInThirdPerson()) {
                     p_cam->ForceFirstPerson();
-                }  
+                }
             }
             if (p_cam->IsInFirstPerson() && !player->AsActorState()->IsWeaponDrawn() && !player->AsActorState()->IsBleedingOut() && !util->PlayerIsBeastFormRace() && view_saved) {
                 // checks if you are in 3rd person and if the view bool was previously changed to true.
