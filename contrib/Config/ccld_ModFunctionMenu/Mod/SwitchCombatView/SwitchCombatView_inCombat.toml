@@ -1,0 +1,2 @@
+dll = "SwitchCombatView.dll"
+api = "in_combat"

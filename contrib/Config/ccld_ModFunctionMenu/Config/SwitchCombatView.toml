@@ -1,0 +1,3 @@
+dll = "SwitchCombatView.dll"
+api = "ReloadConfig"
+type = "MessageBox"
