@@ -44,4 +44,4 @@ namespace Utility
         }
     };
 
-}
+} // namespace Utility

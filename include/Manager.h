@@ -17,7 +17,7 @@ namespace CameraSwitch
 
     private:
     protected:
-        static void ActorUpdateF(RE::Actor* a_actor, float a_zPos, RE::TESObjectCELL* a_cell);
+        static void                                           ActorUpdateF(RE::Actor* a_actor, float a_zPos, RE::TESObjectCELL* a_cell);
         inline static REL::Relocation<decltype(ActorUpdateF)> _ActorUpdateF;
     };
 
