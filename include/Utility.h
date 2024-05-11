@@ -40,7 +40,8 @@ namespace Utility
             return menuControls->InBeastForm();
         }
 
-        static bool IsModCondition() {
+        static bool IsModCondition()
+        {
             auto settings = Settings::GetSingleton();
             if (settings->first_person_mode || settings->lock_third_person)
                 return true;
@@ -59,7 +60,7 @@ namespace Utility
             utility->PlayerCameraSingletonAddress = RELOCATION_ID(514642, 400802).address();
         }
 
-         static void PrintMSG(std::string message) { RE::DebugNotification(message.c_str()); }
+        static void PrintMSG(std::string message) { RE::DebugNotification(message.c_str()); }
     };
 
 } // namespace Utility

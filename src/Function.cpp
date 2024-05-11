@@ -2,7 +2,8 @@
 
 #include <spdlog/sinks/ostream_sink.h>
 
-MFMAPI bool first_person_mode(){
+MFMAPI bool first_person_mode()
+{
     auto        settings = Settings::GetSingleton();
     std::string msg      = "changed view mode";
     CSimpleIniA ini;
@@ -15,8 +16,9 @@ MFMAPI bool first_person_mode(){
     (void)ini.SaveFile(R"(.\Data\SKSE\Plugins\SwitchCombatView.ini)");
 }
 
-MFMAPI bool in_combat() {
-    auto settings = Settings::GetSingleton();
+MFMAPI bool in_combat()
+{
+    auto        settings = Settings::GetSingleton();
     std::string msg      = "changed combat mode";
     CSimpleIniA ini;
     ini.SetUnicode();
